@@ -1,6 +1,6 @@
 module.exports = function toReadable (number) {
     let smallNum = ["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"];
-    let tensNum = ["","","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"];
+    let tensNum = ["twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"];
     let text = "";
     
     if(number == 0) return smallNum[0];  
