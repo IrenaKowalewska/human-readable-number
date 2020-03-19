@@ -1,9 +1,9 @@
 module.exports = function toReadable (number) {
     let smallNum = ["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"];
-    let tensNum = ["twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"];
+    let tensNum = ["","","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"];
     let text = "";
     
-    if(number == 0) return smallNum[0];  
+    if(number == 0) return smallNum[number];  
     
     let hundreds = Math.floor(number / 100), 
          tenUnit = number % 100;
@@ -21,7 +21,7 @@ module.exports = function toReadable (number) {
                  text += " " + smallNum[units];
              }
          }
-    else if (tenUnit != 0) {
+    else if (0 < tenUnit < 20) {
             text += smallNum[tenUnit];
         }	
     return text;
