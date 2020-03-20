@@ -24,5 +24,5 @@ module.exports = function toReadable (number) {
     else if (0 < tenUnit < 20) {
             text += smallNum[tenUnit];
         }	
-    return text;
+    return text.trim();
 }
